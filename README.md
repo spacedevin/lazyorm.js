@@ -3,7 +3,7 @@ lazyorm.js
 
 Description
 -----------
-Maps local javascripts to localstorage and remote rest endpoints as lazy as possible.
+Maps local javascript objects to localstorage and remote rest endpoints as lazy as possible.
 Attempts to load objects from memory first by unique ID. Falls back to websql. If it doesn't exist in the local websql, loads from rest endpoint into websql db, and returns the javascript object. 
 
 Can be called lazy, single callback, or unlazy, callback first for local, then again for the remote update.

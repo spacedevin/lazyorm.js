@@ -2,8 +2,8 @@
  * LazyOrm
  * 
  * Retrieve remote database objects and store them locally, lazily.
- * Maps local javascripts to localstorage and remote rest endpoints as 
- * lazy as possible. Attempts to load objects from memory first by 
+ * Maps local javascript objects to localstorage and remote rest endpoints
+ * as lazy as possible. Attempts to load objects from memory first by 
  * unique ID. Falls back to websql. If it doesn't exist in the local 
  * websql, loads from rest endpoint into websql db, and returns the 
  * javascript object.

@@ -49,10 +49,9 @@ $O.User('devin')
 	});
 ```
 
-Use it with angular. You will have to check the scope phase as sometimes it will be called async, and sometimes not.
+Use it with [AngularJS](http://angularjs.org/). You will have to check the scope phase as sometimes it will be called async, and sometimes not.
 ```
-App.controller('user', function ($scope, $route, $routeParams, $http) {
-
+App.controller('user', function ($scope, $routeParams) {
 	$O.User($routeParams.id)
 		.load(function() {
 			if (!$scope.$$phase) {
@@ -68,4 +67,4 @@ App.controller('user', function ($scope, $route, $routeParams, $http) {
 
 Requirements
 ------------
-* jQuery
+* [jQuery](http://jquery.com)

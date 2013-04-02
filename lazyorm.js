@@ -1,3 +1,22 @@
+/**
+ * LazyOrm
+ * 
+ * Retrieve remote database objects and store them locally, lazily.
+ * Maps local javascripts to localstorage and remote rest endpoints as 
+ * lazy as possible. Attempts to load objects from memory first by 
+ * unique ID. Falls back to websql. If it doesn't exist in the local 
+ * websql, loads from rest endpoint into websql db, and returns the 
+ * javascript object.
+ *
+ * Can be called lazy, single callback, or unlazy, callback first for 
+ * local, then again for the remote update.
+ * 
+ * By Devin Smith (devin.la)
+ * https://github.com/arzynik/lazyorm.js
+ *
+ */
+
+
 var $LazyOrm = {
 	init: function(params) {
 		if ($LazyOrm._init && !params.force) {
